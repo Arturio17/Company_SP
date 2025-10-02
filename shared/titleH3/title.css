@@ -1,0 +1,28 @@
+.titleH3{
+    font-size: var(--text-fontSize-title);
+    font-family: var(--text-fontFamily-secondary);
+    font-weight: var(--text-fontWeight-extrabold);
+    line-height: var(--text-fontLineHeight-title);
+    color: var(--color-primary);
+    margin: 0 0 30px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1160px) {
+    .titleH3 {
+        font-size: var(--text-fontSize-titleSmaller);
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .titleH3 {
+        font-size: var(--text-fontSize-titleSmaller);
+        line-height: var(--text-fontLineHeight-normal);
+    }
+    
+}
+@media (min-width: 360px) and (max-width: 576px) {
+    .titleH3 {
+        font-size: var(--text-fontSize-titleLighter);
+        line-height: var(--text-fontLineHeight-normal);
+    }
+}

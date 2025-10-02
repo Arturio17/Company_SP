@@ -1,0 +1,99 @@
+:root{
+/* text */
+    /* font */
+        /* font family */
+        --text-fontFamily-primary: 'Open Sans';
+        --text-fontFamily-secondary: 'Roboto';
+        /* font weight */
+        --text-fontWeight-extrabold: 700;
+        --text-fontWeight-bold: 600;
+        --text-fontWeight-regular: 500;
+        --text-fontWeight-lighter: 400;
+        /* font size */
+        --text-fontSize-title: 36px;
+        --text-fontSize-titleSmaller: 30px;
+        --text-fontSize-titleLighter: 20px;
+        --text-fontSize-header: 16px;
+        --text-fontSize-textBigger: 18px;
+        --text-fontSize-textNormal: 16px;
+        --text-fontSize-textSmaller: 14px;
+        /* font line height */
+        --text-fontLineHeight-normal: 120%;
+        --text-fontLineHeight-title: 135%;
+        --text-fontLineHeight-button: 145%;
+        --text-fontLineHeight-bigger: 150%;
+/* color */
+--color-primary: #272A33;
+--color-secondary: #FFFFFF;
+--color-supplementary-1: #EE753E;
+--color-border: #E0E6ED;
+--color-border-navMenu: #D5DFE9;
+    
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: var(--text-fontSize-textNormal);
+    line-height: var(--text-fontLineHeight-normal);
+    overflow-x: hidden;
+
+}
+
+@media (min-width: 1440px) {
+    body > *  {
+        width: 1440px;
+    }
+}
+@media (min-width: 1160px) and (max-width: 1440px) {
+    body > * {
+        width: 1160px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1160px) {
+    body > * {
+        width: 768px;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    body > * {
+        width: 576px;
+    }
+}
+@media (min-width: 360px) and (max-width: 576px) {
+    body > * {
+        width: 360px;
+    }
+}
+

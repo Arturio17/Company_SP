@@ -1,0 +1,98 @@
+.main__about {
+    display: flex;
+    flex-direction: column;  
+    margin-bottom: 50px;
+}
+
+.main__about_in {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.main__about__in_description {
+    display: flex;
+    flex-direction: column; 
+    width: 705px; 
+    margin: 0 0 0 30px;
+}
+
+
+.main__about__in_description > *:not(:last-child), .main__about__in_description ul li:not(:last-child) {
+    margin: 0 0 20px 0;
+}
+
+.main__about__in_description-title{
+    font-family: var(--text-fontFamily-primary);  
+    font-weight: var(--text-fontWeight-extrabold);
+    font-size: var(--text-fontSize-textNormal);
+    line-height: var(--text-fontLineHeight-bigger);
+}
+
+.main__about__in_description ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: auto;
+
+}
+
+.main__about__in_description-footer, .main__about__in_description ul li {
+    font-size: var(--text-fontSize-textNormal);
+    font-family: var(--text-fontFamily-primary);
+    font-weight: var(--text-fontWeight-lighter);
+    line-height: var(--text-fontLineHeight-bigger);
+}
+
+.about__li_img{
+    width: 24px;
+    height: 24px;
+}
+.about__li_p {
+    margin: 0 0 0 15px;
+}
+
+.main__about__in_description button {
+    margin: 10px 0 0 0;
+}
+
+
+@media (min-width: 1440px) {
+    .main__about__in_description {
+        width: 705px;
+    }
+}
+@media (min-width: 1160px) and (max-width: 1440px) {
+    .main__about__in_description {
+        width: 565px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1160px) {
+    .main__about__in_description {
+        width: 768px;
+        margin: 30px 0 0 0;
+    }
+    .main__about_in {
+        flex-direction: column;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .main__about__in_description {
+        width: 575px;
+        margin: 30px 0 0 0;
+    }
+    .main__about_in {
+        flex-direction: column;
+    }
+}
+@media (min-width: 360px) and (max-width: 576px) {
+    .main__about__in_description {
+        width: 360px;
+        margin: 20px 0 0 0;
+    }
+    .main__about_in {
+        flex-direction: column;
+    }
+}
+

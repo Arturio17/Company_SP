@@ -1,0 +1,218 @@
+header{
+    height: 80px;
+    max-width: 1440px;
+
+}
+
+.header__container_nav > * a:hover {
+    color: var(--color-supplementary-1);
+}
+
+.header__container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+}
+
+.header__container_burger {
+    display: none;
+    cursor: pointer;
+}
+
+.header__container_burger img{
+    width: 50px;
+    height: 50px;
+}
+
+
+#burgerOpen {
+    transition: all 0.3s ease
+}
+
+ #burgerClose {
+    display: none;
+    transition: all 0.3s ease
+}
+
+.header__container_burger.active .burger-open { display: none; }
+.header__container_burger.active .burger-close { display: flex; }
+.header__container_burger .burger-open { display: flex; }
+.header__container_burger .burger-close { display: none; }
+
+.header__container_nav{
+    display: flex;
+    font-size: var(--text-fontSize-header);
+    line-height: var(--text-fontLineHeight-bigger);
+    font-weight: var(--text-fontWeight-lighter);
+    font-family: var(--text-fontFamily-primary);
+}
+
+.header__container_nav > *:not(:first-child){
+    margin: 0 0 0 80px;    
+}
+
+#navMenu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 50px 0;
+    justify-content: center;
+}
+
+#navMenu.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (min-width: 1440px) {
+
+}
+@media (min-width: 1160px) and (max-width: 1440px) {
+
+}
+@media (min-width: 768px) and (max-width: 1160px) {
+    .header__container_nav {
+        display: none;
+    }
+    .header__container_burger{
+        display: flex;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .header__container_nav {
+        display: none;
+    }
+    .header__container_burger{
+        display: flex;
+    }
+}
+@media (min-width: 360px) and (max-width: 576px) {
+    .header__container_nav {
+        display: none;
+    }
+    .header__container_burger{
+        display: flex;
+    }
+    .header__container_burger img{
+        width: 46px;
+        height: 46px;
+    }
+    #navMenu {
+        padding: 10px 0 50px 0;
+    }
+
+}
+
+.header__container_burger {
+    transition: transform 0.3s ease;
+}
+
+.header__container_burger:hover {
+    transform: scale(1.1);
+}
+
+.header__container_burger:active {
+    transform: scale(0.95);
+}
+
+.header__container_burger.active .burger-close {
+    animation: rotateIn 0.3s ease;
+}
+
+#navMenu {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.navMenu > * {
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.navMenu.active > * {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.navMenu > *:nth-child(1) { transition-delay: 0.1s; }
+.navMenu > *:nth-child(2) { transition-delay: 0.15s; }
+.navMenu > *:nth-child(3) { transition-delay: 0.2s; }
+.navMenu > *:nth-child(4) { transition-delay: 0.25s; }
+.navMenu > *:nth-child(5) { transition-delay: 0.3s; }
+
+.navMenu a {
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px 0;
+    display: block;
+}
+
+.navMenu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-supplementary-1);
+    transition: width 0.3s ease;
+}
+
+.navMenu a:hover::after {
+    width: 100%;
+}
+
+
+
+/* Эффекты для обычной навигации */
+.header__container_nav > * a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.header__container_nav > * a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-supplementary-1);
+    transition: width 0.3s ease;
+}
+
+.header__container_nav > * a:hover::after {
+    width: 100%;
+}
+
+/* Анимация логотипа */
+.header__container_logo {
+    transition: transform 0.3s ease;
+}
+
+.header__container_logo:hover {
+    transform: scale(1.05);
+}
+
+/* Ключевые кадры */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-90deg) scale(0.5);
+    }
+    to {
+        transform: rotate(0) scale(1);
+    }
+}

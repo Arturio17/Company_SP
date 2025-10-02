@@ -1,0 +1,119 @@
+.button-black button{
+    font-size: var(--text-fontSize-textBigger);
+    line-height: var(--text-fontLineHeight-button);
+    padding: 8px 30px 12px 30px;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-family: var(--text-fontFamily-primary);
+    font-weight: var(--text-fontWeight-lighter);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Эффект при наведении */
+.button-black button:hover{
+    background-color: var(--color-supplementary-1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Эффект при нажатии */
+.button-black button:active{
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект пульсации для привлечения внимания */
+.button-black button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.button-black button:hover::after {
+    width: 100px;
+    height: 100px;
+}
+
+/* Эффект загрузки/ожидания */
+.button-black button.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.button-black button.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--color-secondary);
+    border-radius: 50%;
+    animation: buttonSpin 0.8s linear infinite;
+}
+
+@keyframes buttonSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Эффект успешного действия */
+.button-black button.success {
+    background-color: #4CAF50;
+}
+
+/* Анимация появления кнопки */
+.button-black {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: buttonAppear 0.6s ease forwards;
+}
+
+@keyframes buttonAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button-black button:disabled{
+    background-color: var(--color-primary);
+    opacity: 20%;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.button-black button:disabled:hover{
+    background-color: var(--color-primary);
+    transform: none;
+    box-shadow: none;
+}
+
+.button-black button:disabled::after {
+    display: none;
+}
+
+@media (min-width: 360px) and (max-width: 576px) {
+    .button-black button{
+        font-size: var(--text-fontSize-textNormal);
+    }
+    
+    .button-black button:hover{
+        transform: translateY(-1px);
+    }
+}

@@ -1,0 +1,90 @@
+.main__readme {
+    margin: 60px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-supplementary-1);
+}
+
+.readme__content {
+    margin-top: 30px;
+}
+
+.readme__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.readme__item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.readme__item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.readme__item:nth-child(1) { animation-delay: 0.1s; }
+.readme__item:nth-child(2) { animation-delay: 0.2s; }
+.readme__item:nth-child(3) { animation-delay: 0.3s; }
+.readme__item:nth-child(4) { animation-delay: 0.4s; }
+.readme__item:nth-child(5) { animation-delay: 0.5s; }
+.readme__item:nth-child(6) { animation-delay: 0.6s; }
+
+.readme__icon {
+    font-size: 24px;
+    margin-right: 15px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.readme__text {
+    font-family: var(--text-fontFamily-primary);
+    font-size: var(--text-fontSize-textNormal);
+    line-height: var(--text-fontLineHeight-bigger);
+    color: var(--color-primary);
+}
+
+.readme__text strong {
+    color: var(--color-supplementary-1);
+    font-weight: var(--text-fontWeight-bold);
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main__readme {
+        margin: 40px 0;
+        padding: 30px 20px;
+    }
+    
+    .readme__item {
+        padding: 12px 15px;
+    }
+    
+    .readme__icon {
+        font-size: 20px;
+        margin-right: 12px;
+    }
+    
+    .readme__text {
+        font-size: var(--text-fontSize-textSmall);
+    }
+}

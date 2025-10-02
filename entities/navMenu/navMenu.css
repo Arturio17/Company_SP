@@ -1,0 +1,36 @@
+.navMenu {
+    width: 768px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navMenu > * {
+    font-size: var(--text-fontSize-header);
+    font-family: var(--text-fontFamily-primary);
+    font-weight: var(--text-fontWeight-lighter);
+    line-height: var(--text-fontLineHeight-bigger);
+    color: var(--color-primary);
+    height: 20%;
+    border-bottom: 1px solid var(--color-border-navMenu);
+    display: flex;
+    align-items: center;
+}
+
+.navMenu > * a:hover {
+    color: var(--color-supplementary-1);
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .navMenu {
+        width: 576px;
+    }
+}
+@media (min-width: 360px) and (max-width: 576px) {
+    .navMenu {
+        width: 360px;
+    }
+
+}
