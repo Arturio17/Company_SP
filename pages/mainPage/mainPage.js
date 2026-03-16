@@ -6,8 +6,8 @@ const MainPage = () => {
     return (
         [
         Catalog(),
-        About(),
-        Readme()
+        About()
+        
         ]      
     )
 }
