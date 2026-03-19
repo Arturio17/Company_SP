@@ -68,7 +68,7 @@ body {
     font-size: var(--text-fontSize-textNormal);
     line-height: var(--text-fontLineHeight-normal);
     overflow-x: hidden;
-    font-family: var(--text-fontFamily-primary);
+    font-family: var(--text-fontFamily-secondary);
 }
 
 @media (min-width: 1440px) {
